@@ -33,4 +33,7 @@ class ConsultingSpiderSpider(CrawlSpider):
         soup = BeautifulSoup(response.xpath('/html/body/div/div[2]/div[5]/div[1]/div[1]/div/article/div[3]/div/div[1]/div/div/div[2]/p/a[2]').get())
         item['company_website'] = soup.a.get('href')
         item['company_type'] = re.sub('^[\s\xA0]+|[\s\xA0]+$', '', response.xpath('/html/body/div/div[2]/div[5]/div[1]/div[1]/div/article/div[1]/div/p/text()').get()).replace('\r\n\t\t\t\t\t-', '').split(', ')
+        sectors = re.sub('^[\s\xA0]+|[\s\xA0]+$', '', response.xpath('/html/body/div/div[2]/div[5]/div[1]/div[1]/div/article/div[3]/div/div[3]/div/ul').get())
+        soup = BeautifulSoup(sectors)
+        item['company_sectors'] = [x.text for x in soup.find_all('li')]
         return item

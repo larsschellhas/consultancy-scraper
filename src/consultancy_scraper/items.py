@@ -8,6 +8,7 @@ import scrapy
 
 class Consultancy(scrapy.Item):
     """Scrapy Class for Consultancies"""
+
     consulting_de_url = scrapy.Field()
     company_name = scrapy.Field()
     company_street = scrapy.Field()
@@ -18,4 +19,4 @@ class Consultancy(scrapy.Item):
     company_email = scrapy.Field()
     company_website = scrapy.Field()
     company_type = scrapy.Field()
-
+    company_sectors = scrapy.Field()
