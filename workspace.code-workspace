@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.defaultInterpreterPath": "/home/lars/.cache/pypoetry/virtualenvs/consultancy-scraper-X3cLtpof-py3.8/python3.8"
+	}
+}
