@@ -6,5 +6,18 @@
 	],
 	"settings": {
 		"python.defaultInterpreterPath": "/home/lars/.cache/pypoetry/virtualenvs/consultancy-scraper-X3cLtpof-py3.8/python3.8"
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Python: main.py",
+				"type": "python",
+				"request": "launch",
+				"program": "${workspaceFolder}/src/consultancy_scraper/main.py",
+				"console": "integratedTerminal",
+				"cwd": "${workspaceFolder}/src/consultancy_scraper"
+			}
+		]
 	}
 }
