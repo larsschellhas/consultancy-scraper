@@ -1,6 +1,7 @@
 __pycache__/
 spiders/__pycache__/
 src/consultancy_scraper/consultancies.json
+*.csv
 
 __pycache__
 *.py[cod]
