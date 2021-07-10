@@ -19,7 +19,7 @@ class ConsultingSpiderSpider(CrawlSpider):
 
     def parse_item(self, response):
         item = Consultancy()
-        item['consulting_de_url'] = response.url
+        item['original_url'] = response.url
         item['company_name'] = re.sub('^[\s\xA0]+|[\s\xA0]+$', '', response.xpath('/html/body/div/div[2]/div[5]/div[1]/div[1]/div/article/div[3]/div/div[1]/div/div/div[1]/p/text()[1]').get())
         item['company_street'] = re.sub('^[\s\xA0]+|[\s\xA0]+$', '', response.xpath('/html/body/div/div[2]/div[5]/div[1]/div[1]/div/article/div[3]/div/div[1]/div/div/div[1]/p/text()[3]').get())
         plz_city = response.xpath('/html/body/div/div[2]/div[5]/div[1]/div[1]/div/article/div[3]/div/div[1]/div/div/div[1]/p/text()[4]').get()
